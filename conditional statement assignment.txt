@@ -1,0 +1,318 @@
+#find odd even number
+num=18
+if(num%2==0):
+    print("even number")
+else:
+    print("odd number")
+
+
+
+#check whether a number is divisible by 2 and 5 or not
+num=10
+if(num%2==0 and num%5==0):
+    print("number is divisible by 2 and 5")
+else:
+    print("not divisible")
+
+
+
+# find smallest number 
+a=9
+b=7
+c=5
+if(a<b and a<c):
+    print("a is smallest number")
+elif(b<a and b<c):
+     print("b is smallest number")
+else:
+     print("c is smallest number")
+    
+
+
+Q1 Write a program that takes an integer input from 
+the user and checks whether the number is odd or
+even.
+
+Solution:-
+num=int(input("enter a number"))
+if(num%2==0):
+    print("even number")
+else:
+    print("odd number")
+
+
+
+Q2 Write a program that takes three numbers as input and prints the largest of the three.
+
+Solution:-
+a=9
+b=7
+c=5
+if(b<a and c<a):
+    print("a is largest number")
+elif(a<b and c<b):
+     print("b is largest number")
+else:
+     print("c is largest number")
+
+
+
+Q3 Write a program to check if a given year is a leap year. A leap year is divisible by 4 but not by 100
+unless it is also divisible by 400.
+
+Solution:-
+year=int(input("enter a year"))
+if(year%4==0 and year%100!=0):
+    print("given year is a leap year")
+elif(year%400==0 and year%100==0):
+    print("given year is a leap year")
+else:
+    print("given year is not a leap year")
+
+
+
+Q4 Write a program that takes a percentage (integer) as input and prints the corresponding grade based
+on the following criteria:
+>= 90: Grade A
+>= 80: Grade B
+>= 70: Grade C
+>= 60: Grade D
+< 60: Grade F
+
+Solution:-
+percentage= int(input("enter percentage"))
+if(100>percentage>=90):
+    print("Grade A")
+elif(90>percentage>=80):
+    print("Grade B")
+elif(80>percentage>=70):
+    print("Grade C")
+elif(70>percentage>=60):
+    print("Grade D")
+elif(percentage<60):
+    print("Grade F")
+elif(percentage>100):
+    print("invalid input")
+
+
+
+Q5 Write a program that checks if a given letter is a vowel (a, e, i, o, u) or a consonant.
+
+Solution:-
+letter= input("enter a letter")
+if(letter=='a' or letter=='e' or letter=='i' or letter=='o' or letter=='u'):
+    print("letter is vowel")
+else:
+    print("letter is consonant")
+
+
+
+Q6 Write a basic calculator program that takes two numbers and an operator (+, -, *, /) as input and
+performs the specified operation. Print the result based on the operation.
+
+Solution:-
+num1 = float(input("Enter the first number: "))
+operator = input("Enter the operator (+, -, *, /): ")
+num2 = float(input("Enter the second number: "))
+if operator == "+":
+    result = num1 + num2
+elif operator == "-":
+    result = num1 - num2
+elif operator == "*":
+    result = num1 * num2
+elif operator == "/":
+    if num2 != 0:
+        result = num1 / num2
+    else:
+        print("Division by zero is not allowed")
+        exit()
+else:
+    print("Invalid operator")
+    exit()
+
+print(f"{num1} {operator} {num2} = {result}")
+
+
+
+Q7 Write a program that takes a number as input and checks whether it is positive, negative, or zero.
+
+Solution:-
+num=int(input("enter a number"))
+if(num>0):
+    print("number is positive")
+elif(num<0):
+    print("number is negative")
+elif(num==0):
+    print("number is zero")
+
+
+
+Q8 Write a program that checks if a username and password entered by the user match the pre-set values
+username = "admin" and password = "1234". If both match, print "Login Successful", otherwise print
+"Login Failed".
+
+Solution:-
+username=input("enter username")
+password=input("enter password")
+if(username=="admin" and password=="1234"):
+    print("Login Successful")
+else:
+    print("Login Failed")
+
+
+
+Q9 Write a program that takes three sides of a triangle as input and checks if those sides form a valid
+triangle. A triangle is valid if the sum of any two sides is greater than the third side.
+Check conditions like a + b > c, b + c > a, and a + c > b.
+
+Solution:-
+a=int(input("enter first side of triangle"))
+b=int(input("enter  second side of triangle"))
+c=int(input("enter third side of triangle"))
+if(a+b>c or b+c>a or a+c>b):
+    print("valid triangle")
+else:
+    print("invalid triangle")
+
+
+
+Q10 Write a program that calculates the Body Mass Index (BMI) based on user input for weight (in
+kilograms) and height (in meters). Then categorize the BMI into:
+Underweight (BMI < 18.5)
+Normal weight (18.5 <= BMI < 24.9)
+Overweight (25 <= BMI < 29.9)
+Obesity (BMI >= 30)
+Use the formula: BMI = weight / (height ** 2)
+
+Solution:-
+weight= int(input("enter weight(in kilograms): "))
+height= float(input("enter height(in meters): "))
+BMI=weight/(height**2)
+if(BMI<18.5):
+    print("underweight")
+elif(18.5<=BMI<24.9):
+    print("normal weight")
+elif(25<=BMI<29.9):
+    print("overweight")
+elif(BMI>=30):
+    print("obesity")
+
+
+
+Q11 Write a program that calculates the discount for a product based on its price:
+If price is greater than 1000, discount is 10%
+If price is between 500 and 1000, discount is 5%
+Otherwise, no discount
+Print the final price after applying the discount.
+
+Solution:-
+price= float(input("enter the price of product"))
+if(price>1000):
+    discount=price/100*90
+    print("after 10% discount the price is: ", discount)
+elif(500<price<1000):
+    discount=price/100*95
+    print("after 5% discount the price is: ", discount)
+else:
+    print("no discount")
+
+
+
+Q12 Write a program that takes the name of a month as input and prints the number of days in that
+month. Consider leap years for February.
+
+Solution:-
+month= input("enter name of a month")
+a=31
+b=30
+c=29
+if(month=="january" or month=="march" or month=="may" or month=="july" or month=="august" or month=="october" or month=="december" ):
+    print(f" Number of days in {month} is: {a}")
+elif(month=="april" or month=="june" or month=="september" or month=="november"):
+    print(f" Number of days in {month} is: {b}")
+elif(month=="february"):
+    print(f" Number of days in {month} is: {c}")
+
+
+
+Q13 Write a program that simulates a simple ATM. The user should be able to:
+Check balance
+Deposit money
+Withdraw money (ensure the balance doesn't go negative) Use an if-else structure to handle the user's
+
+Solution:-
+balance = 1000.0
+while True:
+    print("\nATM Menu:")
+    print("1. Check Balance")
+    print("2. Deposit Money")
+    print("3. Withdraw Money")
+    print("4. Exit")
+
+    choice = input("Enter your choice (1/2/3/4): ")
+
+    if choice == "1":
+        print(f"Your current balance is: ${balance:.2f}")
+    elif choice == "2":
+        amount = float(input("Enter the amount to deposit: $"))
+        balance += amount
+        print(f"Deposit successful. Your new balance is: ${balance:.2f}")
+    elif choice == "3":
+        amount = float(input("Enter the amount to withdraw: $"))
+        if amount > balance:
+            print("Insufficient funds. Withdrawal denied")
+        else:
+            balance -= amount
+            print(f"Withdrawal successful. Your new balance is: ${balance:.2f}")
+    elif choice == "4":
+        print("Thank you for using the ATM")
+        break
+    else:
+        print("Invalid choice. Please try again")
+
+
+
+Q14 Write a program that categorizes a given age into different groups:
+Infant (0-1 year)
+Toddler (2-4 years)
+Child (5-12 years)
+Teenager (13-19 years)
+Adult (20-59 years)
+Senior (60 years and above)
+
+Solution:-
+age= int(input("enter your age"))
+if(0<=age<=1):
+    print("Infant")
+elif(2<=age<=4):
+    print("Toddler")
+elif(5<=age<=12):
+    print("Child")
+elif(13<=age<=19):
+    print("Teenager")
+elif(20<=age<=59):
+    print("Adult")
+elif(age>=60):
+    print("Senior")
+
+
+
+Q15 Write a program that takes an integer (1-7) as input and prints the corresponding day of the week (1
+for Monday, 2 for Tuesday, etc.).
+
+Solution:-
+num=int(input("enter a number(1-7):"))
+if(num==1):
+    print("Monday")
+elif(num==2):
+    print("Tuesday")
+elif(num==3):
+    print("Wednesday")
+elif(num==4):
+    print("Thursday")
+elif(num==5):
+    print("Friday")
+elif(num==6):
+    print("Saturday")
+elif(num==7):
+    print("Sunday")
